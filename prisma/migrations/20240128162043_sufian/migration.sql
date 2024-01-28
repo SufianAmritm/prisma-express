@@ -1,0 +1,9 @@
+-- AlterTable
+ALTER TABLE "Cars" ALTER COLUMN "created_at" DROP NOT NULL,
+ALTER COLUMN "deleted" DROP NOT NULL,
+ALTER COLUMN "updated_at" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "Driver" ALTER COLUMN "created_at" DROP NOT NULL,
+ALTER COLUMN "deleted" DROP NOT NULL,
+ALTER COLUMN "updated_at" DROP NOT NULL;
