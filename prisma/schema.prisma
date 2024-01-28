@@ -13,9 +13,9 @@ model Driver{
 id   Int @id @default(autoincrement())
 email String @unique
 name String?
-created_at DateTime @default(now())
-deleted Boolean @default(false)
-updated_at DateTime @updatedAt
+created_at DateTime? @default(now())
+deleted Boolean? @default(false)
+updated_at DateTime? @updatedAt
 cars Cars[]
 
 
@@ -24,9 +24,9 @@ model Cars{
   id Int @id @default(autoincrement())
   model Int?
   name String
-  created_at DateTime @default(now())
-deleted Boolean @default(false)
-updated_at DateTime @updatedAt
+  created_at DateTime? @default(now())
+deleted Boolean? @default(false)
+updated_at DateTime? @updatedAt
 driver Driver @relation(fields: [driverId],references: [id])
 driverId Int
 
